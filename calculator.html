@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator | AP ALUPVC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark"> <header class="navbar">
+        <div class="logo"><span class="logo-box">AP</span> ALUPVC</div>
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="services.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="calculator.html" class="active">CALCULATOR</a>
+        </nav>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="nav-btn">SR</button>
+            <a href="contact.html" class="btn-contact">CONTACT ↗</a>
+        </div>
+    </header>
+
+    <main class="calculator-page">
+        <div class="calc-header">
+            <p class="subtitle">CONFIGURE YOUR PROJECT AND GET AN INSTANT ESTIMATE</p>
+            <h1 class="main-title">Price Calculator</h1>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calc-preview">
+                <div class="area-display">AREA: <span id="display-area">1.68</span> M²</div>
+                
+                <div class="window-visualizer" id="window-visualizer">
+                    <div class="window-frame">
+                        <div class="glass-pane"></div>
+                        <div class="glass-pane"></div>
+                    </div>
+                </div>
+                
+                <div class="dimension-labels">
+                    <span id="display-width">120cm</span>
+                    <span id="display-height">140cm</span>
+                </div>
+
+                <div class="specs-list">
+                    <div class="spec-row"><span>Material Type</span> <strong id="spec-material">PVC</strong></div>
+                    <div class="spec-row"><span>Chamber Count</span> <strong id="spec-chambers">5</strong></div>
+                    <div class="spec-row"><span>Glass Type</span> <strong id="spec-glass">Double Glazing</strong></div>
+                    <div class="spec-row"><span>Color</span> <strong id="spec-color">White</strong></div>
+                </div>
+            </div>
+
+            <div class="calc-controls">
+                
+                <div class="control-group">
+                    <label>MATERIAL TYPE</label>
+                    <div class="toggle-buttons" id="material-toggle">
+                        <button class="active" data-val="pvc">PVC</button>
+                        <button data-val="alu">Aluminum</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>PRODUCT TYPE</label>
+                    <div class="toggle-buttons" id="product-type-toggle">
+                        <button class="active" data-val="window">Window</button>
+                        <button data-val="door">Door</button>
+                        <button data-val="sliding">Sliding Door</button>
+                    </div>
+                </div>
+
+                <div class="sliders-row">
+                    <div class="slider-container">
+                        <label>WIDTH (CM): <span id="width-val">120</span></label>
+                        <input type="range" id="width-slider" min="60" max="300" value="120">
+                    </div>
+                    <div class="slider-container">
+                        <label>HEIGHT (CM): <span id="height-val">140</span></label>
+                        <input type="range" id="height-slider" min="60" max="250" value="140">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>CHAMBER COUNT: <span id="chamber-val">5</span></label>
+                    <div class="chamber-selector" id="chamber-options">
+                        <button data-val="3">3</button>
+                        <button class="active" data-val="5">5</button>
+                        <button data-val="7">7</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>GLASS TYPE</label>
+                    <div class="toggle-buttons" id="glass-toggle">
+                        <button class="active" data-val="double">Double Glazing</button>
+                        <button data-val="triple">Triple Glazing</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>COLOR</label>
+                    <div class="color-grid" id="color-options">
+                        <button class="active" data-val="white">White</button>
+                        <button data-val="anthracite">Anthracite</button>
+                        <button data-val="wood">Wood Grain</button>
+                        <button data-val="custom">Custom RAL</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-summary">
+                <div class="price-box">
+                    <p class="price-label">ESTIMATED PRICE</p>
+                    <div class="price-row">
+                        <span>per unit</span>
+                        <h3 id="price-per-unit">€277</h3>
+                    </div>
+                    <div class="price-row total-row">
+                        <span>TOTAL</span>
+                        <h2 id="price-total">€277</h2>
+                    </div>
+                    <p class="price-note">Area: <span id="summary-area">1.68</span> m²</p>
+                </div>
+                
+                <p class="disclaimer">Prices are estimates. Contact us for a precise quote.</p>
+                <button class="btn-primary w-100">Request Detailed Quote ↗</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
