@@ -694,46 +694,75 @@ section, main, .site-footer {
     transform: translateY(0);
 }
 
-/* --- RESPONSIVE KOD (max width 768px - npr. iPhone) --- */
+/* ========================================= */
+/* === RESPONSIVNOST & FINESE (TEL/TAB) ==== */
+/* ========================================= */
+
+section, main, .site-footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.active-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- KOD ZA TELEFONE KOJI NE PUCA --- */
 @media (max-width: 768px) {
     
-    /* GLOBALNO */
-    .page-container { padding: 40px 5%; }
-
-    /* LUKSUZNA MOBILE NAVIGACIJA */
-    .navbar {
-        flex-direction: row; /* Ostaje u redu */
-        padding: 15px 20px;
-        position: sticky; /* Prati skrol */
+    /* ZAKUCAVANJE ŠIRINE DA NEMA BEŽANJA U STRANU */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
     }
-    
-    /* Skrivamo standardne linkove */
+
+    .page-container { 
+        padding: 40px 5%; 
+    }
+
+    /* NAVIGACIJA */
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-controls {
+        z-index: 1000; /* Mora biti iznad menija */
+    }
+
+    /* MENI PREKO CELOG EKRANA (FULLSCREEN) */
     .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh; /* Skoro cela visina ekrana */
-        top: 8vh;
-        background-color: var(--nav-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bg-color);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 100%; /* Padajući meni preko celog fona */
-        transform: translateX(100%); /* Sakriven desno */
-        transition: transform 0.5s ease-in;
-        border-top: 1px solid var(--border-color);
-        z-index: 1000;
-        padding-top: 40px;
-        justify-content: flex-start;
-        gap: 30px;
+        gap: 40px;
+        transform: translateX(100%); /* Sakriveno skroz van ekrana */
+        transition: transform 0.4s ease-in-out;
+        z-index: 999;
     }
     
-    .nav-links a { font-size: 1.1rem; }
+    .nav-links.active { 
+        transform: translateX(0); /* Pojavljuje se tačno preko ekrana */
+    }
 
-    /* Klasa za aktiviranje menija preko JS-a */
-    .nav-links.active { transform: translateX(0%); }
+    .nav-links a { 
+        font-size: 1.5rem; 
+    }
 
-    /* Dizajn Hamburger Menija (Sa slike 29) */
-    .burger-menu { cursor: pointer; display: block; z-index: 1001; }
+    /* HAMBURGER IKONICA */
+    .burger-menu { 
+        cursor: pointer; 
+        display: block; 
+    }
     .burger-menu div {
         width: 25px;
         height: 2px;
@@ -741,35 +770,63 @@ section, main, .site-footer {
         margin: 5px;
         transition: all 0.3s ease;
     }
-    
-    /* Animacija hamburgera u X */
     .burger-menu.active .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
     .burger-menu.active .line2 { transform: rotate(45deg) translate(-5px, -6px); }
 
-    /* HERO SEKCIJA - MOBILNI GRADIENT */
+    /* HERO SEKCIJA */
     .hero-section {
         height: auto;
         padding: 100px 5% 60px 5%;
         text-align: center;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
-    .main-title { font-size: 3rem; margin-bottom: 20px; }
-    .hero-buttons { flex-direction: column; width: 100%; gap: 15px; }
+    .hero-content {
+        width: 100%;
+        z-index: 2;
+    }
 
-    /* Dodajemo suptilni gradient preko placeholder-a da izgleda premium kao na slici */
-    .hero-background::after {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-        z-index: 1;
+    /* Fiksirana pozadina (bivša siva traka po sredini) */
+    .hero-background {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; /* Bilo je right, pa je pravilo problem */
+        opacity: 0.3; /* Stavili smo ga u pozadinu, bledo */
+        z-index: 0;
+    }
+
+    .main-title { 
+        font-size: 2.8rem; 
+        margin-bottom: 20px; 
     }
     
-    .hero-content { z-index: 2; position: relative; } /* Tekst mora biti iznad gradijenta */
+    .hero-buttons { 
+        display: flex;
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px; 
+    }
 
-    /* STATISTIKA (Složeno u 2 kolone kao na slici 33) */
+    /* O NAMA (Početna) - Bilo je prepolovljeno */
+    .about-preview {
+        display: flex;
+        flex-direction: column; /* Tekst gore, slika dole */
+    }
+
+    .about-text {
+        padding: 50px 5%;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    /* STATISTIKA */
     .stats-section {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
     
@@ -779,31 +836,43 @@ section, main, .site-footer {
         padding: 30px 10px;
     }
     
-    .stat-item h2 { font-size: 2.8rem; }
+    .stat-item h2 { font-size: 2.5rem; }
 
-    /* KALKULATOR MOBILE - OPTIMIZACIJA (image_15.png) */
+    /* KALKULATOR */
     .calculator-container {
-        grid-template-columns: 1fr; /* Preview na vrhu, kontrole ispod */
+        display: flex;
+        flex-direction: column; /* Sve u jednu kolonu */
+        gap: 30px;
+    }
+
+    .sliders-row {
+        flex-direction: column;
         gap: 20px;
     }
 
-    .calc-header { margin-bottom: 30px; }
-    
-    /* Slajderi moraju biti veći za prst */
-    input[type="range"] { height: 40px; margin-top: 15px; }
-    
-    .window-visualizer { height: 180px; } /* Manja slika prozora na fonu */
-
-    /* GALERIJA */
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item.large, .gallery-item.wide { grid-column: span 1; }
-
-    /* FOOTER */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
+    .window-visualizer { 
+        height: 200px; 
     }
-    
-    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+
+    input[type="range"] { 
+        height: 30px; 
+        margin-top: 10px; 
+    }
+
+    /* OSTALE MREŽE (Galerija, Kontakt, Footer) */
+    .gallery-grid, .contact-grid, .contact-form, .footer-content { 
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    .form-group.full-width {
+        width: 100%;
+    }
+
+    .footer-bottom { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center; 
+    }
 }
