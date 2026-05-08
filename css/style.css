@@ -498,3 +498,178 @@ input[type="range"] {
     cursor: pointer;
     border: none;
 }
+/* --- OSTALE STRANICE (Zajednički lejaut) --- */
+.page-container {
+    padding: 80px 10%;
+}
+
+.page-header {
+    margin-bottom: 60px;
+}
+
+/* --- SERVICES STRANICA --- */
+.services-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    width: 100px;
+}
+
+.service-icon {
+    font-size: 1.5rem;
+    width: 80px;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* --- GALLERY STRANICA --- */
+.gallery-filters {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.gallery-filters button {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.gallery-filters button.active {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+/* --- ABOUT STRANICA --- */
+.about-page .stats-section {
+    margin-top: 80px;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-lead {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* --- CONTACT STRANICA --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block .label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form .btn-primary {
+    grid-column: span 2;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
