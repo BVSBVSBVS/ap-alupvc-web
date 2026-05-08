@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | AP ALUPVC</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
         <div class="logo"><span class="logo-box">AP</span> ALUPVC</div>
         <nav class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="services.html" class="active">SERVICES</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="calculator.html">CALCULATOR</a>
+            <a href="index.html" class="lang-home">HOME</a>
+            <a href="about.html" class="lang-about">ABOUT</a>
+            <a href="services.html" class="lang-services active">SERVICES</a>
+            <a href="gallery.html" class="lang-gallery">GALLERY</a>
+            <a href="calculator.html" class="lang-calc">CALCULATOR</a>
         </nav>
         <div class="nav-controls">
-            <button id="theme-toggle" class="nav-btn">🌗</button>
-            <a href="contact.html" class="btn-contact">CONTACT ↗</a>
+            <button id="lang-toggle" class="nav-btn">SR</button>
+            <button id="theme-toggle" class="nav-btn theme-icon">☾</button>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
         </div>
     </header>
 
@@ -27,11 +32,9 @@
             <p class="subtitle">COMPLETE WINDOW & DOOR SOLUTIONS</p>
             <h1 class="main-title">Our Services</h1>
         </div>
-
         <div class="services-list">
             <div class="service-item">
                 <div class="service-number">01</div>
-                <div class="service-icon">🪟</div>
                 <div class="service-content">
                     <h3>PVC Windows & Doors</h3>
                     <p>Multi-chamber PVC profiles with superior thermal insulation. Available in 3, 5, and 7-chamber configurations with triple glazing options.</p>
@@ -39,7 +42,6 @@
             </div>
             <div class="service-item">
                 <div class="service-number">02</div>
-                <div class="service-icon">🏗️</div>
                 <div class="service-content">
                     <h3>Aluminum Systems</h3>
                     <p>Premium aluminum profiles for large-span openings, curtain walls, and structural glazing. Thermal break technology for energy efficiency.</p>
@@ -47,7 +49,6 @@
             </div>
             <div class="service-item">
                 <div class="service-number">03</div>
-                <div class="service-icon">🚪</div>
                 <div class="service-content">
                     <h3>Sliding Systems</h3>
                     <p>Lift-and-slide and parallel-slide-tilt systems for seamless indoor-outdoor transitions. Maximum glass area with minimal frame visibility.</p>
@@ -55,7 +56,6 @@
             </div>
             <div class="service-item">
                 <div class="service-number">04</div>
-                <div class="service-icon">🔐</div>
                 <div class="service-content">
                     <h3>Entrance Doors</h3>
                     <p>High-security aluminum entrance doors with multi-point locking systems, decorative panels, and smart access integration.</p>
@@ -63,6 +63,34 @@
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><span class="logo-box">AP</span> ALUPVC</h3>
+                <p>Premium Alu & PVC solutions.<br>Premium window and door systems since 2005.</p>
+                <a href="contact.html" class="link-arrow">CONTACT ↗</a>
+            </div>
+            <div class="footer-links">
+                <h4>COLLECTION</h4>
+                <a href="about.html">— About</a>
+                <a href="services.html">— Services</a>
+                <a href="calculator.html">— Calculator</a>
+                <a href="contact.html">— Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT</h4>
+                <p>+381 11 123 4567</p>
+                <p>info@alupvc-pro.rs</p>
+                <p>123 Industrial Zone, Belgrade, Serbia</p>
+                <p class="work-hours">Mon - Fri: 08:00 - 17:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ALUPVC PRO. ALL RIGHTS RESERVED.</p>
+            <p>BELGRADE, SERBIA | EST. 2005</p>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

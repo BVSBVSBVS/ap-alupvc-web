@@ -8,23 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="navbar">
-        <div class="logo">
-            <span class="logo-box">AP</span> ALUPVC
-        </div>
-        
+        <div class="logo"><span class="logo-box">AP</span> ALUPVC</div>
         <nav class="nav-links">
-            <a href="index.html" class="active">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="services.html">SERVICES</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="calculator.html">CALCULATOR</a>
+            <a href="index.html" class="lang-home active">HOME</a>
+            <a href="about.html" class="lang-about">ABOUT</a>
+            <a href="services.html" class="lang-services">SERVICES</a>
+            <a href="gallery.html" class="lang-gallery">GALLERY</a>
+            <a href="calculator.html" class="lang-calc">CALCULATOR</a>
         </nav>
-
         <div class="nav-controls">
             <button id="lang-toggle" class="nav-btn">SR</button>
-            <button id="theme-toggle" class="nav-btn">🌗</button>
+            <button id="theme-toggle" class="nav-btn theme-icon">☾</button>
             <div class="burger-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -32,56 +27,67 @@
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <p class="subtitle">EST. 2005 — BELGRADE, SERBIA</p>
-            <h1 class="main-title">PRECISION<br>PROTECTION</h1>
-            <p class="description">Premium Alu & PVC windows, doors, and facades<br>— engineered for lasting performance.</p>
-            
-            <div class="hero-buttons">
-                <a href="calculator.html" class="btn-solid">GET A QUOTE ↗</a>
-                <a href="gallery.html" class="btn-outline">VIEW PROJECTS</a>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="subtitle">EST. 2005 — BELGRADE, SERBIA</p>
+                <h1 class="main-title">PRECISION<br>PROTECTION</h1>
+                <p class="description">Premium Alu & PVC windows, doors, and facades<br>— engineered for lasting performance.</p>
+                <div class="hero-buttons">
+                    <a href="calculator.html" class="btn-solid">GET A QUOTE ↗</a>
+                    <a href="gallery.html" class="btn-outline">VIEW PROJECTS</a>
+                </div>
+            </div>
+            <div class="hero-background"></div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-item"><h2>2,400+</h2><p>— PROJECTS COMPLETED</p></div>
+            <div class="stat-item"><h2>18+</h2><p>— YEARS EXPERIENCE</p></div>
+            <div class="stat-item"><h2>10yr</h2><p>— YEAR WARRANTY</p></div>
+            <div class="stat-item"><h2>6</h2><p>— PROFILE SYSTEMS</p></div>
+        </section>
+
+        <section class="about-preview">
+            <div class="about-text">
+                <p class="section-label">ENGINEERING EXCELLENCE SINCE 2005</p>
+                <h2>We are a leading manufacturer and installer of premium aluminum and PVC window and door systems.</h2>
+                <p class="about-description">Our state-of-the-art CNC manufacturing facility ensures every profile is cut, welded, and assembled to tolerances measured in fractions of a millimeter. We work with industry-leading profile systems including Schüco, Rehau, and VEKA.</p>
+                <a href="about.html" class="link-arrow">ABOUT ↗</a>
+            </div>
+            <div class="about-image">
+                <div class="image-caption"><p>PROFILE</p><p><strong>Schüco FWS 60+</strong></p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><span class="logo-box">AP</span> ALUPVC</h3>
+                <p>Premium Alu & PVC solutions.<br>Premium window and door systems since 2005.</p>
+                <a href="contact.html" class="link-arrow">CONTACT ↗</a>
+            </div>
+            <div class="footer-links">
+                <h4>COLLECTION</h4>
+                <a href="about.html">— About</a>
+                <a href="services.html">— Services</a>
+                <a href="calculator.html">— Calculator</a>
+                <a href="contact.html">— Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT</h4>
+                <p>+381 11 123 4567</p>
+                <p>info@alupvc-pro.rs</p>
+                <p>123 Industrial Zone, Belgrade, Serbia</p>
+                <p class="work-hours">Mon - Fri: 08:00 - 17:00</p>
             </div>
         </div>
-        <div class="hero-background"></div>
-    </section>
-
-    <section class="stats-section">
-        <div class="stat-item">
-            <h2>2,400+</h2>
-            <p>— PROJECTS COMPLETED</p>
+        <div class="footer-bottom">
+            <p>© 2026 ALUPVC PRO. ALL RIGHTS RESERVED.</p>
+            <p>BELGRADE, SERBIA | EST. 2005</p>
         </div>
-        <div class="stat-item">
-            <h2>18+</h2>
-            <p>— YEARS EXPERIENCE</p>
-        </div>
-        <div class="stat-item">
-            <h2>10yr</h2>
-            <p>— YEAR WARRANTY</p>
-        </div>
-        <div class="stat-item">
-            <h2>6</h2>
-            <p>— PROFILE SYSTEMS</p>
-        </div>
-    </section>
-
-    <section class="about-preview">
-        <div class="about-text">
-            <p class="section-label">ENGINEERING EXCELLENCE SINCE 2005</p>
-            <h2>We are a leading manufacturer and installer of premium aluminum and PVC window and door systems.</h2>
-            <p class="about-description">
-                Our state-of-the-art CNC manufacturing facility ensures every profile is cut, welded, and assembled to tolerances measured in fractions of a millimeter. We work with industry-leading profile systems including Schüco, Rehau, and VEKA.
-            </p>
-            <a href="about.html" class="link-arrow">ABOUT ↗</a>
-        </div>
-        <div class="about-image">
-            <img src="assets/images/building-profile.jpg" alt="Building Profile">
-            <div class="image-caption">
-                <p>PROFILE</p>
-                <p><strong>Schüco FWS 60+</strong></p>
-            </div>
-        </div>
-    </section>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
