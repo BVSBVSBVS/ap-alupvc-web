@@ -673,3 +673,117 @@ input[type="range"] {
     cursor: pointer;
     margin-top: 10px;
 }
+/* ========================================= */
+/* --- RESPONSIVNOST (MOBILNI TELEFONI) --- */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* GLOBALNO */
+    .page-container {
+        padding: 40px 5%;
+    }
+
+    /* NAVIGACIJA */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* HERO SEKCIJA (Početna) */
+    .hero-section {
+        height: auto;
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 3.5rem; /* Smanjujemo onaj ogromni naslov */
+    }
+
+    .description {
+        margin: 0 auto 30px auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Dugmići jedan ispod drugog na telefonu */
+        width: 100%;
+    }
+
+    .hero-background {
+        width: 100%;
+        opacity: 0.15; /* Pravimo pozadinu blago prozirnom da se tekst vidi preko nje */
+    }
+
+    /* STATISTIKA */
+    .stats-section {
+        grid-template-columns: 1fr 1fr; /* 2 kolone umesto 4 */
+    }
+    
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 30px 10px;
+    }
+
+    /* ABOUT PREVIEW (Početna) */
+    .about-preview {
+        grid-template-columns: 1fr; /* Slika ide ispod teksta */
+    }
+
+    .about-text {
+        padding: 50px 5%;
+    }
+
+    /* KALKULATOR (Najbitnije za mobilni) */
+    .calculator-container {
+        grid-template-columns: 1fr; /* Sve tri kolone se slažu jedna ispod druge */
+        gap: 20px;
+    }
+
+    .sliders-row {
+        flex-direction: column;
+    }
+
+    /* GALERIJA */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Slike jedna ispod druge */
+    }
+
+    .gallery-item.large, .gallery-item.wide {
+        grid-column: span 1; /* Poništavamo ono da slika zauzima dve kolone */
+    }
+
+    /* KONTAKT FORMA */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
